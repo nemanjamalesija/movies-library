@@ -31,7 +31,13 @@ html {
   justify-items: center;
 }
 
-.fetched-movie {
+.movie-card {
+  cursor: pointer;
+}
+
+img {
+  height: 100%;
+  width: 100%;
 }
 
 .movie-description {
@@ -39,13 +45,17 @@ html {
   opacity: 90%;
   color: #fff;
   visibility: hidden;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
-.fetched-movie:hover .movie-description {
-  transform: translateY(-5rem);
+.movie-card:hover .movie-description {
+  transform: translateY(-6rem);
   transition: all 0.3s;
   visibility: visible;
+}
+
+.movie-card:hover .movie-description-translateExtra {
+  transform: translateY(-8rem);
 }
 
 .heading-fifth {
@@ -55,4 +65,37 @@ html {
 
 .movie-year {
   font-size: 1.4rem;
+}
+
+/* search input */
+
+form {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-control label {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.form-control input {
+  padding: 0.5rem 1rem;
+  min-width: 30rem;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.form-control input:focus {
+  border: 1px solid #ddd;
 }
