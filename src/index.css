@@ -23,7 +23,7 @@ html {
 }
 
 .movies-container {
-  width: 120rem;
+  width: 80%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -31,6 +31,28 @@ html {
   justify-items: center;
 }
 
+.fetched-movie {
+}
+
+.movie-description {
+  background-color: #000;
+  opacity: 90%;
+  color: #fff;
+  visibility: hidden;
+  padding: 0.5rem;
+}
+
 .fetched-movie:hover .movie-description {
-  transform: translateY(-10rem);
+  transform: translateY(-5rem);
+  transition: all 0.3s;
+  visibility: visible;
+}
+
+.heading-fifth {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-year {
+  font-size: 1.4rem;
 }
