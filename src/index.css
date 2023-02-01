@@ -31,11 +31,11 @@ html {
   justify-items: center;
 }
 
-.movie-card {
+.movie-card-main {
   cursor: pointer;
 }
 
-img {
+.movie-image-main {
   height: 100%;
   width: 100%;
 }

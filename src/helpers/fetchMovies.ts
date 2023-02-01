@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { queryKey, movieCard } from '../constants/types';
+import { queryKey, movie } from '../constants/types';
 
-const fetchMovies = async ({ queryKey }: queryKey): Promise<movieCard[]> => {
+const fetchMovies = async ({ queryKey }: queryKey): Promise<movie[]> => {
   const searchTerm = queryKey[1];
 
   const {
