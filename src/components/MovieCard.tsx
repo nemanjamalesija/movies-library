@@ -3,7 +3,7 @@ import { movie } from '../constants/types';
 import { Link } from 'react-router-dom';
 
 const MovieCard = (props: movie) => {
-  const { Poster, Title, Type, Year, imdbID } = props;
+  const { Poster, Title, Year, imdbID } = props;
   return (
     <Link to={`/${imdbID}`}>
       {' '}

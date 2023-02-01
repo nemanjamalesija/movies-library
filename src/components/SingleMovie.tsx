@@ -6,6 +6,7 @@ import { singleMovie } from '../constants/types';
 import { IonIcon } from '@ionic/react';
 import { star } from 'ionicons/icons';
 import { Link } from 'react-router-dom';
+import Loading from './Loading';
 
 const SingleMovie = () => {
   const { movieId } = useParams();
@@ -14,8 +15,7 @@ const SingleMovie = () => {
     fetchSingleMovie
   );
 
-  if (isLoading) return <h1>Loading...</h1>;
-  console.log(data);
+  if (isLoading) return <Loading />;
 
   const { Plot, Poster, Rated, Title, imdbRating, imdbVotes, Year, Runtime } =
     data as singleMovie;
@@ -47,6 +47,9 @@ const SingleMovie = () => {
           <p className="runtime">{Runtime}</p>
         </div>
       </div>
+      <Link to="/">
+        <button className="btn">Keep searching</button>
+      </Link>
     </article>
   );
 };

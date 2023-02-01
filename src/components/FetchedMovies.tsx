@@ -1,18 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
-import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import fetchMovies from '../helpers/fetchMovies';
 import MovieCard from './MovieCard';
+import Loading from './Loading';
 
 const FetchedMovies = () => {
-  const queryClient = useQueryClient();
   const [searchTerm, setSearchTerm] = useState('batman');
   const [searchTermDummy, setSearchTermDummy] = useState('Batman');
 
   const { data, isLoading } = useQuery(['movies', searchTerm], fetchMovies);
 
-  if (isLoading) return <h1>Loading...</h1>;
-  console.log(data);
+  if (isLoading) return <Loading />;
 
   const submitHandler = () => {
     setSearchTerm(searchTermDummy);

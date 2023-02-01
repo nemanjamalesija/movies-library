@@ -48,13 +48,13 @@ img {
   padding: 1rem;
 }
 
-.movie-card:hover .movie-description {
+.movie-card-main:hover .movie-description {
   transform: translateY(-6rem);
   transition: all 0.3s;
   visibility: visible;
 }
 
-.movie-card:hover .movie-description-translateExtra {
+.movie-card-main:hover .movie-description-translateExtra {
   transform: translateY(-8rem);
 }
 
@@ -109,6 +109,7 @@ form {
   max-width: 100rem;
   margin: 0 auto;
   margin-top: 12rem;
+  row-gap: 2rem;
 }
 
 .heading-secondary {
@@ -152,4 +153,19 @@ form {
   height: 16px;
   width: 16px;
   color: rgb(245, 197, 24);
+}
+
+.btn {
+  border: none;
+  border-bottom: 1px solid #37b24d;
+  color: #37b24d;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 10rem;
+  font-size: 3.2rem;
+  color: #333;
 }
